@@ -1,6 +1,6 @@
 # json4dummies
 
-[![Version](https://img.shields.io/badge/json4dummies-0.0-blue.svg)](https://github.com/hekonsek/json4dummies/releases)
+[![Version](https://img.shields.io/badge/json4dummies-0.1-blue.svg)](https://github.com/hekonsek/json4dummies/releases)
 
 **json4dummies** is an opinionated wrapper around [Jackson](https://github.com/FasterXML/jackson) relying on static per-JVM
 configuration.
