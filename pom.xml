@@ -11,7 +11,7 @@
 
     <groupId>com.github.hekonsek</groupId>
     <artifactId>json4dummies</artifactId>
-    <version>0.0</version>
+    <version>0.1-SNAPSHOT</version>
 
     <properties>
         <jackson.version>2.9.2</jackson.version>
@@ -245,7 +245,7 @@
         <connection>scm:git:git@github.com:hekonsek/json4dummies.git</connection>
         <developerConnection>scm:git:git@github.com:hekonsek/json4dummies.git</developerConnection>
         <url>git@github.com:hekonsek/json4dummies.git</url>
-        <tag>json4dummies-0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
