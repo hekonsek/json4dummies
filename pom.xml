@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <licenses>
         <license>
@@ -12,7 +12,7 @@
     <groupId>com.github.hekonsek</groupId>
     <artifactId>json4dummies</artifactId>
     <name>${project.artifactId}</name>
-    <version>0.0-SNAPSHOT</version>
+    <version>0.0</version>
 
     <properties>
         <jackson.version>2.9.2</jackson.version>
@@ -246,7 +246,7 @@
         <connection>scm:git:git@github.com:hekonsek/json4dummies.git</connection>
         <developerConnection>scm:git:git@github.com:hekonsek/json4dummies.git</developerConnection>
         <url>git@github.com:hekonsek/json4dummies.git</url>
-        <tag>HEAD</tag>
+        <tag>json4dummies-0.0</tag>
     </scm>
 
     <distributionManagement>
