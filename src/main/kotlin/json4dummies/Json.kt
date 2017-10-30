@@ -8,10 +8,19 @@ class Json {
 
         private var mapper = ObjectMapper()
 
+        // To JSON operations
+
         @JvmStatic
         fun toJson(obj: Any): String {
             return mapper.writeValueAsString(obj)
         }
+
+        @JvmStatic
+        fun toJsonBytes(obj: Any): ByteArray {
+            return mapper.writeValueAsBytes(obj)
+        }
+
+        // From JSON operations
 
         @JvmStatic
         fun fromJson(value: String): Map<String, Any> {
@@ -22,7 +31,6 @@ class Json {
         fun fromJson(bytes: ByteArray): Map<String, Any> {
             return mapper.readValue(bytes, Map::class.java) as Map<String, Any>
         }
-
 
     }
 

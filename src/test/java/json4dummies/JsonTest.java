@@ -7,6 +7,7 @@ import java.util.Map;
 
 import static json4dummies.Json.fromJson;
 import static json4dummies.Json.toJson;
+import static json4dummies.Json.toJsonBytes;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class JsonTest {
@@ -16,6 +17,13 @@ public class JsonTest {
     @Test
     public void shouldConvertMap() {
         String json = toJson(map);
+        Map<String, Object> parsedMap = fromJson(json);
+        assertThat(parsedMap).isEqualTo(map);
+    }
+
+    @Test
+    public void shouldConvertMapToBytes() {
+        byte[] json = toJsonBytes(map);
         Map<String, Object> parsedMap = fromJson(json);
         assertThat(parsedMap).isEqualTo(map);
     }
