@@ -76,6 +76,7 @@
 
     <build>
         <defaultGoal>install</defaultGoal>
+        <sourceDirectory>src/main/kotlin</sourceDirectory>
 
         <plugins>
             <plugin>
@@ -152,14 +153,18 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${maven-javadoc-plugin.version}</version>
+                        <groupId>org.jetbrains.dokka</groupId>
+                        <artifactId>dokka-maven-plugin</artifactId>
+                        <configuration>
+                            <sourceDirectories>
+                                <dir>src/main/kotlin</dir>
+                            </sourceDirectories>
+                        </configuration>
                         <executions>
                             <execution>
-                                <id>attach-javadocs</id>
+                                <phase>package</phase>
                                 <goals>
-                                    <goal>jar</goal>
+                                    <goal>javadocJar</goal>
                                 </goals>
                             </execution>
                         </executions>
@@ -215,6 +220,14 @@
             </build>
         </profile>
     </profiles>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jcenter</id>
+            <name>JCenter</name>
+            <url>https://jcenter.bintray.com/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <!-- Required by Sonatype release -->
 
