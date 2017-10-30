@@ -6,7 +6,7 @@ class Json {
 
     companion object {
 
-        private val mapper = ObjectMapper()
+        private val mapper = ObjectMapper().findAndRegisterModules()
 
         // To JSON operations
 
