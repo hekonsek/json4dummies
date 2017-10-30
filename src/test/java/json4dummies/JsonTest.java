@@ -35,4 +35,11 @@ public class JsonTest {
         assertThat(parsedMap).isEqualTo(map);
     }
 
+    @Test
+    public void shouldIncludeNullFields() {
+        String json = toJson(new Person(null, null));
+        assertThat(json).contains("\"name\":null");
+        assertThat(json).contains("\"surname\":null");
+    }
+
 }
