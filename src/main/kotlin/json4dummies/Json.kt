@@ -11,14 +11,10 @@ class Json {
         // To JSON operations
 
         @JvmStatic
-        fun toJson(obj: Any): String {
-            return mapper.writeValueAsString(obj)
-        }
+        fun toJson(value: Any): String = mapper.writeValueAsString(value)
 
         @JvmStatic
-        fun toJsonBytes(obj: Any): ByteArray {
-            return mapper.writeValueAsBytes(obj)
-        }
+        fun toJsonBytes(value: Any): ByteArray = mapper.writeValueAsBytes(value)
 
         // From JSON operations
 
@@ -29,6 +25,7 @@ class Json {
 
         @JvmStatic
         fun fromJson(value: String): Map<String, Any> {
+            @Suppress("UNCHECKED_CAST")
             return fromJson(value, Map::class.java) as Map<String, Any>
         }
 
@@ -39,6 +36,7 @@ class Json {
 
         @JvmStatic
         fun fromJson(bytes: ByteArray): Map<String, Any> {
+            @Suppress("UNCHECKED_CAST")
             return fromJson(bytes, Map::class.java) as Map<String, Any>
         }
 
