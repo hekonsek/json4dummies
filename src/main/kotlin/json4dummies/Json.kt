@@ -10,6 +10,12 @@ class Json {
 
         // To JSON operations
 
+        /**
+         * Converts given object to JSON string.
+         *
+         * @param value object to convert to JSON string.
+         * @return JSON string representing given object.
+         */
         @JvmStatic
         fun toJson(value: Any): String = mapper.writeValueAsString(value)
 

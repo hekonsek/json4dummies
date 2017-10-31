@@ -24,3 +24,7 @@ The same from an array of bytes:
     byte[] json = ...;
     Person person = Json.fromJson(json, Person);
     Map<String, Object> personMap = Json.fromJson(json);
+    
+## Default configuration
+
+**json4dummies** by default finds and loads Jackson modules available in your classpath.
